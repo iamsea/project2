@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PCell" id="gTV-IL-0wX" customClass="SiteCollectionViewCell" customModule="Tennis" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="215" height="144"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrh-pn-1WX">
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="室内0号硬地" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sd-w4-5u9">
+                                <rect key="frame" x="8" y="5" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6X-nc-57Z">
+                                <rect key="frame" x="184" y="0.0" width="30" height="30"/>
+                                <state key="normal" image="delete_normal"/>
+                                <connections>
+                                    <action selector="deleteButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ba7-vL-IcM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17274494009999999" green="0.75773237179999997" blue="0.36418659549999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Ej8-KE-4Pj"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="siteBackImage_default" translatesAutoresizingMaskIntoConstraints="NO" id="d5x-mm-UaA">
+                        <rect key="frame" x="0.0" y="29" width="215" height="115"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Mrh-pn-1WX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LS5-iZ-8Sf"/>
+                <constraint firstAttribute="trailing" secondItem="Mrh-pn-1WX" secondAttribute="trailing" id="qcE-Gr-wp8"/>
+                <constraint firstItem="Mrh-pn-1WX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vdz-gF-X0S"/>
+            </constraints>
+            <connections>
+                <outlet property="siteTitleLabel" destination="6sd-w4-5u9" id="bFQ-Iz-8Hh"/>
+            </connections>
+            <point key="canvasLocation" x="675.5" y="411"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delete_normal" width="108" height="108"/>
+        <image name="siteBackImage_default" width="1200" height="688"/>
+    </resources>
+</document>
